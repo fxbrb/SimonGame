@@ -1,7 +1,7 @@
-var redAudio = new Audio('../sound/do.wav');
-var greenAudio = new Audio('../sound/re.wav');
-var blueAudio = new Audio('../sound/mi.wav');
-var yellowAudio = new Audio('../sound/fa.wav');
+var redAudio = new Audio('../sound/do.mp3');
+var greenAudio = new Audio('../sound/re.mp3');
+var blueAudio = new Audio('../sound/mi.mp3');
+var yellowAudio = new Audio('../sound/fa.mp3');
 var clickRouge = document.getElementById('clickRouge');
 var clickVert = document.getElementById('clickVert');
 var clickBleu = document.getElementById('clickBleu');
