@@ -1,16 +1,27 @@
+// Variable Audio
 var redAudio = new Audio('../sound/do.mp3');
 var greenAudio = new Audio('../sound/re.mp3');
 var blueAudio = new Audio('../sound/mi.mp3');
 var yellowAudio = new Audio('../sound/fa.mp3');
+
+// Variables des boutons
 var clickRouge = document.getElementById('clickRouge');
 var clickVert = document.getElementById('clickVert');
 var clickBleu = document.getElementById('clickBleu');
 var clickJaune = document.getElementById('clickJaune');
+
+// Variable Compteur de click
 var nb = document.getElementById('nb');
 var cpt = parseInt(nb.innerText);
+
+// Timeouts pour bouton
 var timeouts = [];
+
+// Variables Modal
 var help = document.getElementById("help");
 var span = document.getElementsByClassName("close")[0];
+
+// Compteur de click
 
 clickRouge.addEventListener('click', function () {
     cpt = cpt + 1;
@@ -28,6 +39,8 @@ clickJaune.addEventListener('click', function () {
     cpt = cpt + 1;
     nb.innerHTML = cpt;
 });
+
+// Baisser l'opacité au clic et jouer un son
 
 function changeColorRed() {
     redAudio.play();
@@ -53,6 +66,8 @@ function changeColorYellow() {
     timeouts.push(setTimeout(returnColorYellow, 400, clickJaune));
 }
 
+// fonction pour remettre la couleur initial du bouton
+
 function returnColorRed() {
     clickRouge.style.backgroundColor = 'red';
 }
@@ -68,6 +83,8 @@ function returnColorBlue() {
 function returnColorYellow() {
     clickJaune.style.backgroundColor = 'yellow';
 }
+
+// Modal
 
 help.addEventListener("click", function () {
     modal.style.display = "block";
