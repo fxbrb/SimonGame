@@ -9,6 +9,8 @@ var clickJaune = document.getElementById('clickJaune');
 var nb = document.getElementById('nb');
 var cpt = parseInt(nb.innerText);
 var timeouts = [];
+var help = document.getElementById("help");
+var span = document.getElementsByClassName("close")[0];
 
 clickRouge.addEventListener('click', function () {
     cpt = cpt + 1;
@@ -30,36 +32,47 @@ clickJaune.addEventListener('click', function () {
 function changeColorRed() {
     redAudio.play();
     clickRouge.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorRed,400,clickRouge));
+    timeouts.push(setTimeout(returnColorRed, 400, clickRouge));
 }
 
 function changeColorGreen() {
     greenAudio.play();
     clickVert.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorGreen,400,clickVert));
+    timeouts.push(setTimeout(returnColorGreen, 400, clickVert));
 }
 
 function changeColorBlue() {
     blueAudio.play();
     clickBleu.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
-    timeouts.push(setTimeout(returnColorBlue,400,clickBleu));
+    timeouts.push(setTimeout(returnColorBlue, 400, clickBleu));
 }
 
 function changeColorYellow() {
     yellowAudio.play();
     clickJaune.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorYellow,400,clickJaune));
+    timeouts.push(setTimeout(returnColorYellow, 400, clickJaune));
 }
 
-function returnColorRed(){
+function returnColorRed() {
     clickRouge.style.backgroundColor = 'red';
 }
-function returnColorGreen(){
+
+function returnColorGreen() {
     clickVert.style.backgroundColor = 'green';
 }
-function returnColorBlue(){
+
+function returnColorBlue() {
     clickBleu.style.backgroundColor = 'blue';
 }
-function returnColorYellow(){
+
+function returnColorYellow() {
     clickJaune.style.backgroundColor = 'yellow';
 }
+
+help.addEventListener("click", function () {
+    modal.style.display = "block";
+});
+
+span.addEventListener("click", function () {
+    modal.style.display = "none";
+});
