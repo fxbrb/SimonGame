@@ -4,6 +4,7 @@ body {
 }
 
 .content {
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -18,7 +19,7 @@ body {
     color: black;
     width: 80%;
     font-size: 17px;
-    margin-left: 50px;
+    margin-left: 300px;
 }
 
 .content1 .material-icons {
@@ -26,6 +27,7 @@ body {
 }
 
 h1 {
+    margin-left: 75px;
     font-size: 40px;
     color: black;
 }
@@ -87,6 +89,7 @@ button {
     border-radius: 10%;
     padding: 10px 25px;
     display: block;
+    float: right;
     cursor: pointer;
 }
 

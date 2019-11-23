@@ -5,10 +5,10 @@ var blueAudio = new Audio('../sound/mi.mp3');
 var yellowAudio = new Audio('../sound/fa.mp3');
 
 // Variables des boutons
-var clickRouge = document.getElementById('clickRouge');
-var clickVert = document.getElementById('clickVert');
-var clickBleu = document.getElementById('clickBleu');
-var clickJaune = document.getElementById('clickJaune');
+var clickRed = document.getElementById('clickRed');
+var clickGreen = document.getElementById('clickGreen');
+var clickBlue = document.getElementById('clickBlue');
+var clickYellow = document.getElementById('clickYellow');
 
 // Variable Compteur de click
 var nb = document.getElementById('nb');
@@ -23,19 +23,19 @@ var span = document.getElementsByClassName("close")[0];
 
 // Compteur de click
 
-clickRouge.addEventListener('click', function () {
+clickRed.addEventListener('click', function () {
     cpt = cpt + 1;
     nb.innerHTML = cpt;
 });
-clickVert.addEventListener('click', function () {
+clickGreen.addEventListener('click', function () {
     cpt = cpt + 1;
     nb.innerHTML = cpt;
 });
-clickBleu.addEventListener('click', function () {
+clickBlue.addEventListener('click', function () {
     cpt = cpt + 1;
     nb.innerHTML = cpt;
 });
-clickJaune.addEventListener('click', function () {
+clickYellow.addEventListener('click', function () {
     cpt = cpt + 1;
     nb.innerHTML = cpt;
 });
@@ -44,44 +44,44 @@ clickJaune.addEventListener('click', function () {
 
 function changeColorRed() {
     redAudio.play();
-    clickRouge.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorRed, 400, clickRouge));
+    clickRed.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
+    timeouts.push(setTimeout(returnColorRed, 400, clickRed));
 }
 
 function changeColorGreen() {
     greenAudio.play();
-    clickVert.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorGreen, 400, clickVert));
+    clickGreen.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+    timeouts.push(setTimeout(returnColorGreen, 400, clickGreen));
 }
 
 function changeColorBlue() {
     blueAudio.play();
-    clickBleu.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
-    timeouts.push(setTimeout(returnColorBlue, 400, clickBleu));
+    clickBlue.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
+    timeouts.push(setTimeout(returnColorBlue, 400, clickBlue));
 }
 
 function changeColorYellow() {
     yellowAudio.play();
-    clickJaune.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
-    timeouts.push(setTimeout(returnColorYellow, 400, clickJaune));
+    clickYellow.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
+    timeouts.push(setTimeout(returnColorYellow, 400, clickYellow));
 }
 
 // fonction pour remettre la couleur initial du bouton
 
 function returnColorRed() {
-    clickRouge.style.backgroundColor = 'red';
+    clickRed.style.backgroundColor = 'red';
 }
 
 function returnColorGreen() {
-    clickVert.style.backgroundColor = 'green';
+    clickGreen.style.backgroundColor = 'green';
 }
 
 function returnColorBlue() {
-    clickBleu.style.backgroundColor = 'blue';
+    clickBlue.style.backgroundColor = 'blue';
 }
 
 function returnColorYellow() {
-    clickJaune.style.backgroundColor = 'yellow';
+    clickYellow.style.backgroundColor = 'yellow';
 }
 
 // Modal
